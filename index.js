@@ -2,12 +2,12 @@ const express = require('express')
 const fs = require('fs')
 const app = express()
 
+const HelloWorldController = require('./controllers/HelloWorld.controller')
+
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-app.get('/', (request, response) => {
-    return response.send('Hello, world!')
-})
+app.get('/', HelloWorldController)
 
 app.get('/todos', (request, response) => {
     const showPending = request.query.showpending
