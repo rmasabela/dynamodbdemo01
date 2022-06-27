@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const controller = (request, response) => {
    if (!request.body.name) {
        return response.status(400).send('Missing name')

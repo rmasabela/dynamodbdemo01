@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 const controller = (request, response) => {
    const id = request.params.id
 
